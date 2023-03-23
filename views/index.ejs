@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BookMyShow</title>
+</head>
+
+<body>
+    <h4>GOLD-Rs. 300.00</h4>
+    <hr style="height:1px;width:29%;color:blueviolet;background-color:blueviolet">
+    <div class="container">
+        <form action="/" method="POST">
+            
+
+            <input type="submit" name="seat" class="btn" value="1">
+            <input type="submit" name="seat" class="btn" value="2">
+            <input type="submit" name="seat" class="btn" value="3">
+            <input type="submit" name="seat" class="btn" value="4">
+            <input type="submit" name="seat" class="btn" value="5">
+
+            <br>
+
+            <input type="submit" name="seat" class="btn" value="6">
+            <input type="submit" name="seat" class="btn" value="7">
+            <input type="submit" name="seat" class="btn" value="8">
+            <input type="submit" name="seat" class="btn" value="9">
+            <input type="submit" name="seat" class="btn" value="10">
+
+            <input type="submit" value="cancel" class="cancel" name="cancel">
+
+
+
+        </form>
+
+    </div>
+
+    <div class="screen">
+        <strong>Screen</strong>
+    </div>
+
+    <hr style="height:1px;width:29%;color:blueviolet;background-color:blueviolet">
+
+    <div class="booking">
+        <div class="bookingInside">
+            Your Booking
+        </div>
+
+        <ul>
+            <% for(var i=0; i < seatListOut.length; i++){ %>
+
+                <li>
+                    <%= seatListOut[i] %>
+                </li>
+
+                <% } %>
+
+        </ul>
+
+
+    </div>
+
+    <a
+        href="https://in.bookmyshow.com/buytickets/kabzaa-hindi-ahmedabad/movie-ahd-ET00343989-MT/20230322#!seatlayout">
+        <div class="payment">
+            Pay Rs. <%= payment[0] %>.00
+
+        </div>
+    </a>
+
+
+
+</body>
+
+</html>
