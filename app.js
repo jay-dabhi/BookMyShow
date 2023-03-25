@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 var alert = require('alert');
 const app = express();
 
+const port = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -57,6 +58,6 @@ app.post('/', function (req, res) {
 
 })
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || port, function () {
     console.log("Server Is running");
 })
